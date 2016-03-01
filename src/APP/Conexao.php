@@ -1,6 +1,6 @@
 <?php
 
-require_once "ConexaoInterface.php";
+namespace APP;
 
 class Conexao implements ConexaoInterface
 {

@@ -1,5 +1,7 @@
 <?php
 
+namespace APP;
+
 class Cliente {
 
     //SOLID uma classe tem que ter uma única responsabilidade

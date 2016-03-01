@@ -16,10 +16,15 @@ $container['conexao'] = $container->share(function(){
     return new \APP\Conexao("localhost", "diservice", "root", "goleta");
 });
 
-$cliente = new \APP\Cliente($container['conexao']);
+//Registrando novo servico cliente compartilhado (Recurso pimple)
+$container['cliente'] = $container->share(function(\Pimple $container ){
+    return new \APP\Cliente($container['conexao']);
+});
 
-//Usa a mesma conexao anterior, também conhecido como Lazy Services
-$cliente2 = new \APP\Cliente($container['conexao']);
+//Chamando container de servico, reduz acoplamento de classe e a responsabilidade fica no container.
+//Novo objeto é criado somente quando necessário
+$cliente = $container['cliente'];
+
 
 
 

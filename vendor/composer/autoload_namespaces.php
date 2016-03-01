@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Pimple' => array($vendorDir . '/pimple/pimple/src'),
+    'Pimple' => array($vendorDir . '/pimple/pimple/lib'),
     'APP' => array($baseDir . '/src'),
 );

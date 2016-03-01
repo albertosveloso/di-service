@@ -20,7 +20,7 @@ class Conexao implements ConexaoInterface
 
     public function connect()
     {
-      return new \PDO("mysql:host={$this->host};dbname={$this->db}",$this->user, $this->$password);
+      return new \PDO("mysql:host={$this->host};dbname={$this->db}", $this->user, $this->password);
     }
 
 }
